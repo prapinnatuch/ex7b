@@ -12,7 +12,8 @@ function checkSID() {
 
 function checkCandiNo() {
   let candi = (document.getElementById("candi").value).trim();
-  if (isNaN(candi) || candi < 1) {
+  // เช็คว่าเป็นตัวเลข (isNaN) และต้องอยู่ในช่วง 1 ถึง 10 เท่านั้น
+  if (isNaN(candi) || candi < 1 || candi > 10 || candi === "") {
     return false;
   } else {
     return true;
