@@ -1,6 +1,9 @@
 function checkSID() {
   let sid = (document.getElementById("sid").value).trim();
-  if (sid.length == 10) {
+  // ใช้ Regular Expression เช็คว่าเป็นตัวเลข 0-9 จำนวน 10 หลักเป๊ะๆ
+  let regExp = /^[0-9]{10}$/;
+  
+  if (regExp.test(sid)) {
     return true;
   } else {
     return false;
